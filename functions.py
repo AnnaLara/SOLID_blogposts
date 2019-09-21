@@ -8,7 +8,7 @@ def number_of_words(content):
     return len(content.split())
 
 
-def count_word_occurences(word, content):
+def count_word_occurrences(word, content):
     '''Count number of word occurrences in a file'''
 
     counter = 0
@@ -21,7 +21,7 @@ def count_word_occurences(word, content):
 def percentage_of_word(word, content):
     '''Calculate ratio of number of word occurrences to number of all words'''
     total_words = number_of_words(content)
-    word_occurrences = count_word_occurences(word, content)
+    word_occurrences = count_word_occurrences(word, content)
     return word_occurrences/total_words
 
 

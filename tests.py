@@ -1,5 +1,5 @@
 import unittest
-from functions import read_localfile, number_of_words, count_word_occurences, \
+from functions import read_localfile, number_of_words, count_word_occurrences, \
     percentage_of_word, percentage_of_word_in_localfile
 
 
@@ -24,13 +24,13 @@ class TestNumberOfWords(unittest.TestCase):
         self.assertTrue(number_of_words(self.text), 7)
 
 
-class TestCountWordOccurences(unittest.TestCase):
+class TestCountWordOccurrences(unittest.TestCase):
 
     def setUp(self):
         self.text = 'I am going to work on unittests'
 
     def test_count_word_occurences(self):
-        self.assertTrue(count_word_occurences('am', self.text), 1)
+        self.assertTrue(count_word_occurrences('am', self.text), 1)
 
 
 class TestPercentageOfWord(unittest.TestCase):
