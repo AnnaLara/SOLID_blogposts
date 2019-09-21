@@ -9,7 +9,7 @@ def number_of_words(content):
 
 
 def count_word_occurences(word, content):
-    '''Count numer of word occurrences in a file'''
+    '''Count number of word occurrences in a file'''
 
     counter = 0
     for e in content.split():
