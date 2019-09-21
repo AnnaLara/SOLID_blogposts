@@ -1,23 +1,30 @@
-def read_file(file):
+def read_localfile(file):
     '''Read file'''
-    return open(file,"r").read()
+    return open(file, "r").read()
 
-def number_of_words(file):
+
+def number_of_words(content):
     '''Count number of words in a file'''
-    f = read_file(file)
-    return len(f.split())
+    return len(content.split())
 
-def count_word(word, file):
+
+def count_word_occurences(word, content):
     '''Count numer of word occurrences in a file'''
-    t = read_file(file)
+
     counter = 0
-    for e in t.split():
+    for e in content.split():
         if word.lower() == e.lower():
-            counter +=1
+            counter += 1
     return counter
 
-def percentage_of_word(word, file):
+
+def percentage_of_word(word, content):
     '''Calculate ratio of number of word occurrences to number of all words'''
-    total_words = number_of_words(file)
-    word_occurrences = count_word(word, file)
+    total_words = number_of_words(content)
+    word_occurrences = count_word_occurences(word, content)
     return word_occurrences/total_words
+
+
+def percentage_of_word_in_localfile(word, file):
+    content = read_localfile(file)
+    return percentage_of_word(word, content)
