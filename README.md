@@ -10,3 +10,5 @@ File structure:
 Blog post links:
 
 [Single Responsibility principle](https://dev.to/annalara/solid-programming-part-1-single-responsibility-principle-1ki6)
+
+[Open/Closed Principle](https://dev.to/annalara/solid-programming-part-2-open-closed-principle-3ddj)
