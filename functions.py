@@ -1,3 +1,7 @@
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+
+
 def read_localfile(file):
     '''Read file'''
     return open(file, "r").read()
@@ -29,3 +33,11 @@ def percentage_of_word_in_localfile(word, file):
     '''Calculate ratio of number of word occurrences to number of all words in a text file'''
     content = read_localfile(file)
     return percentage_of_word(word, content)
+
+
+def get_text_from_url(url):
+    '''Extract html as string from given url'''
+    page = urlopen(url).read()
+    soup = BeautifulSoup(page)
+    text = soup.get_text()
+    return text
